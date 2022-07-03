@@ -19,17 +19,6 @@ class StatelessLearn extends StatelessWidget {
               PictureBox(
                 pic: Image.asset("assets/mikasa.jpg"),
               ),
-              const CardGenerator(
-                verticalMargin: 25,
-                widthValue: 200,
-                heightValue: 100,
-                sizedBox: SizedBoxWithTitle(
-                  height: 100,
-                  width: 200,
-                  textWrite: TextGenerator(text: 'tatakae'),
-                ),
-                RadiusValue: 20,
-              ),
             ],
           ),
         ),

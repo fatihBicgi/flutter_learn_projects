@@ -10,6 +10,6 @@ class ImageGenerator extends StatefulWidget {
 class _ImageGeneratorState extends State<ImageGenerator> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Column();
   }
 }

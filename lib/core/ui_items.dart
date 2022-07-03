@@ -18,21 +18,21 @@ class PictureBox extends StatelessWidget {
 }
 
 class SizedBoxWithTitle extends StatelessWidget {
-  const SizedBoxWithTitle({
+  SizedBoxWithTitle({
     Key? key,
     required this.height,
     required this.width,
-    required this.textWrite,
+    required this.textWriteWidget,
   }) : super(key: key);
   final double width, height;
-  final Widget textWrite;
+  final Widget textWriteWidget;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
       height: height,
-      child: textWrite,
+      child: textWriteWidget,
     );
   }
 }
@@ -53,15 +53,13 @@ class TextGenerator extends StatelessWidget {
 }
 
 class CardGenerator extends StatelessWidget {
-  const CardGenerator(
-      {Key? key,
-      required this.sizedBox,
-      required this.verticalMargin,
-      required this.heightValue,
-      required this.widthValue,
-      required this.RadiusValue})
-      : super(key: key);
-  final double verticalMargin, widthValue, heightValue;
+  const CardGenerator({
+    Key? key,
+    required this.sizedBox,
+    required this.verticalMargin,
+    required this.RadiusValue,
+  }) : super(key: key);
+  final double verticalMargin;
   final Widget sizedBox;
   final double RadiusValue;
 
@@ -72,6 +70,19 @@ class CardGenerator extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: verticalMargin),
       child: sizedBox,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(RadiusValue)),
+    );
+  }
+}
+
+class PaddingForAll extends StatelessWidget {
+  const PaddingForAll({Key? key, this.widget}) : super(key: key);
+  final Widget? widget;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(8),
+      child: widget,
     );
   }
 }
