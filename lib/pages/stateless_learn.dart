@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class StatelessLearn extends StatelessWidget {
@@ -7,31 +9,51 @@ class StatelessLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Column(
-          children: const [
-            TextGenerator(
-              text: 'hello world',
-            ),
-            _CardGenerator(
-              verticalMargin: 25,
-              widthValue: 200,
-              heightValue: 100,
-              sizedBox: SquareSizedBox(
-                height: 100,
-                width: 200,
-                textWrite: TextGenerator(text: 'hi'),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            children: [
+              PictureBox(
+                pic: Image.asset("assets/mikasa.jpg"),
               ),
-            ),
-          ],
+              const _CardGenerator(
+                verticalMargin: 25,
+                widthValue: 200,
+                heightValue: 100,
+                sizedBox: SizedBoxWithTitle(
+                  height: 100,
+                  width: 200,
+                  textWrite: TextGenerator(text: 'tatakae'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-class SquareSizedBox extends StatelessWidget {
-  const SquareSizedBox({
+class PictureBox extends StatelessWidget {
+  const PictureBox({
+    Key? key,
+    required this.pic,
+  }) : super(key: key);
+  final Image pic;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 400,
+      width: 400,
+      child: pic,
+    );
+  }
+}
+
+class SizedBoxWithTitle extends StatelessWidget {
+  const SizedBoxWithTitle({
     Key? key,
     required this.height,
     required this.width,
