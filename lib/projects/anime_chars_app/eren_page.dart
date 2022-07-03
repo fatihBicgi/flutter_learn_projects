@@ -17,7 +17,6 @@ class ErenPage extends StatelessWidget {
   }
 
   PictureBox ErenPic() => PictureBox(pic: Image.asset("assets/eren.png"));
-
   CardGenerator CardWithTatakaeText() {
     return CardGenerator(
         sizedBox: SizedBoxWithTitle(

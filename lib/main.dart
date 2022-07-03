@@ -3,6 +3,7 @@ import 'package:flutter_application_1/core/ui_items.dart';
 import 'package:flutter_application_1/projects/anime_chars_app/eren_page.dart';
 import 'learn/random_image_page.dart';
 import 'learn/stateless_learn.dart';
+import 'projects/anime_chars_app/home_page.dart';
 import 'projects/anime_chars_app/mikasa_page.dart';
 
 //>flutter launch emulator
@@ -22,9 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(),
       home: Scaffold(
         appBar: AppBar(
-          title: TextGenerator(text: 'Anime Chars'),
+          title: TextGenerator(text: 'AOT Chars'),
         ),
-        body: MikasaPage(),
+        body: HomePage(),
       ),
     );
   }
