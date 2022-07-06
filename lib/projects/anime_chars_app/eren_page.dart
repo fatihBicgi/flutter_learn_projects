@@ -24,7 +24,7 @@ class ErenPage extends StatelessWidget {
           width: 200,
           textWriteWidget: TextGenerator(text: 'tatakae'),
         ),
-        verticalMargin: 8,
+        verticalMargin: 10,
         RadiusValue: 20);
   }
 }
