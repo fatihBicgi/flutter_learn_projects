@@ -40,26 +40,62 @@ class _RandomColorHomePage extends State<RandomColorHomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Expanded(
-              flex: 5,
-              child: Center(
-                child: RandomColorContainer(),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: TextGenerator(
-                text: Count.toString(),
-              ),
-            ),
-            Expanded(
-              flex: 4,
-              child: TextGenerator(
-                text: Util.randomColor().toString(),
-              ),
-            )
+            ExpandedRandomColorContainer(),
+            ExpandedCounter(Count: Count),
+            ExpandedColorName(),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ExpandedColorName extends StatelessWidget {
+  const ExpandedColorName({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 4,
+      child: TextGenerator(
+        text: Util.randomColor().toString(),
+      ),
+    );
+  }
+}
+
+class ExpandedCounter extends StatelessWidget {
+  const ExpandedCounter({
+    Key? key,
+    required this.Count,
+  }) : super(key: key);
+
+  final int Count;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 1,
+      child: TextGenerator(
+        text: Count.toString(),
+      ),
+    );
+  }
+}
+
+class ExpandedRandomColorContainer extends StatelessWidget {
+  const ExpandedRandomColorContainer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      flex: 5,
+      child: Center(
+        child: RandomColorContainer(),
       ),
     );
   }
