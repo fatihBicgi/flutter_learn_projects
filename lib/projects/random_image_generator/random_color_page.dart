@@ -40,11 +40,15 @@ class _RandomColorHomePage extends State<RandomColorHomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            Center(
-              child: RandomColorContainer(),
+            Expanded(
+              child: Center(
+                child: RandomColorContainer(),
+              ),
             ),
-            TextGenerator(
-              text: Count.toString(),
+            Expanded(
+              child: TextGenerator(
+                text: Count.toString(),
+              ),
             )
           ],
         ),
