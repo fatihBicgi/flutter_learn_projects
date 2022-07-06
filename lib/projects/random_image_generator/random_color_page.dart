@@ -41,13 +41,21 @@ class _RandomColorHomePage extends State<RandomColorHomePage> {
         child: Column(
           children: [
             Expanded(
+              flex: 5,
               child: Center(
                 child: RandomColorContainer(),
               ),
             ),
             Expanded(
+              flex: 1,
               child: TextGenerator(
                 text: Count.toString(),
+              ),
+            ),
+            Expanded(
+              flex: 4,
+              child: TextGenerator(
+                text: Util.randomColor().toString(),
               ),
             )
           ],
