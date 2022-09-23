@@ -1,7 +1,5 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
 import '../core/ui_items.dart';
 
 class StatelessLearn extends StatelessWidget {
