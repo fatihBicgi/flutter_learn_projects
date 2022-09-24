@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Test Page',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(),
-      home: TestPage(),
+      theme: ThemeData(colorSchemeSeed: Color.fromARGB(255, 80, 107, 164), useMaterial3: true),
+      home: AnimeHomePage(),
     );
   }
 }

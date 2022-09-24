@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/ui_items.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[800],
+      appBar: AppBar(),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.purple,
+        onPressed: () {},
+        child: Icon(Icons.add),
       ),
-      body: Column(
-        children: [],
+      body: Padding(
+        padding: const EdgeInsets.all(50.0),
+        child: Column(
+          children: [
+            TextGenerator(text: 'Merhaba Dünya'),
+          ],
+        ),
       ),
     );
   }
